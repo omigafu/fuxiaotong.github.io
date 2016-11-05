@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux vim," />
 
 
 
@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="TimeLine">
 <meta property="og:description" content="vim 是一个非常强大的工具，因为可以安装各种各样好用的插件，vim 和 emacs 被成为程序员们的最爱，这里我来简单介绍一个如何优雅地使用vim网友的力量是强大的，我们可以在 github 这里找到一个神器，相信你一定会喜欢  
 通过下面这两行代码即可完成安装12git clone https://github.com/amix/vimrc.git ~/.vim_runtimesh ~/.vi">
-<meta property="og:updated_time" content="2016-11-05T06:00:58.590Z">
+<meta property="og:updated_time" content="2016-11-05T06:29:02.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何优雅地使用vim">
 <meta name="twitter:description" content="vim 是一个非常强大的工具，因为可以安装各种各样好用的插件，vim 和 emacs 被成为程序员们的最爱，这里我来简单介绍一个如何优雅地使用vim网友的力量是强大的，我们可以在 github 这里找到一个神器，相信你一定会喜欢  
@@ -294,11 +294,11 @@
 <p>下面说说这里面好用的插件  </p>
 <h3 id="snippet"><a href="#snippet" class="headerlink" title="snippet"></a>snippet</h3><p>当然是最强大的 snippet 排在第一位<br><code>~/.vim_runtime/sources_non_forked/vim-snippets/snippets</code> 这个目录下，我们可以看到各种语言的 snippet. 你应该小心翼翼地找到你的那门语言的<br>snippet. 然后编辑它，比如<code>lua.snippets</code>，进去后可以看到各种snippet,比如有<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">snippet forp</div><div class="line">    <span class="keyword">for</span> $&#123;<span class="number">1</span>:i&#125;,$&#123;<span class="number">2</span>:v&#125; <span class="keyword">in</span> <span class="built_in">pairs</span>($&#123;<span class="number">3</span>:table_name&#125;) <span class="keyword">do</span></div><div class="line">        $&#123;<span class="number">0</span>:<span class="comment">-- body&#125;</span></div><div class="line">    <span class="keyword">end</span></div></pre></td></tr></table></figure></p>
 <p>那么你在一个lua文件中输入<code>forp</code>,后按<code>Tab</code>键，就可以看到奇迹了，然后你可以按<code>Tab</code>来进入下一项要改变的内容中，大大提高了效率！你也可以在snippets<br>文件中自定义自己的模板<br><a id="more"></a></p>
-<h3 id="mru"><a href="#mru" class="headerlink" title="mru"></a>mru</h3><p>在vim中输入 <code>:MRU</code> 我们可以浏览到之前打开的文件，快速切换到之前的文件</p>
+<h3 id="MRU"><a href="#MRU" class="headerlink" title="MRU"></a>MRU</h3><p>在vim中输入 <code>:MRU</code> 我们可以浏览到之前打开的文件，快速切换到之前的文件</p>
 <h3 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h3><p>在vim中输入 <code>NERDTree</code> 我们可以在右边浏览到目录树，是一个非常方便的功能</p>
-<h3 id="cscope"><a href="#cscope" class="headerlink" title="cscope"></a>cscope</h3><p>下面介绍一个非常实用的工具 <code>cscope</code><br>这个工具的作用是实现函数的跳转，如果你是ubuntu系统，请执行<br><code>apt-get install cscope</code><br>首先在目录下使用“cscope -Rkqb”生成cscope.out文件<br>-R     ：表示包含此目录的子目录，而非仅仅是当前目录；<br>-b     ：此参数告诉cscope生成数据库后就自动退出；<br>-q     ：生成cscope.in.out和cscope.po.out文件，加快cscope的索引速度可能会用到的其他选项：<br>-k     ：在生成索引时，不搜索/usr/include目录；<br>上面一步就是为你的源文件建立一个cscope数据库<br>在Vim启动之后手动地添加这个数据库，输入<code>: cs add cscope.out</code> 即可，然后你可以通过<code>:cs show</code>来检查一下是否被添加进去<br>接下来输入<code>:set cscopetag</code> 你可以把光标移动到某个位置通过<code>Ctrl+]</code>可以直接跳转到定义处，通过<code>Ctrl+t</code>可以返回跳转前的地方<br>此外还可以调“cscope find”（或 cs f ）命令进行查找<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">0或者s   —— 查找这个C符号</div><div class="line">1或者g  —— 查找这个定义</div><div class="line">2或者d  —— 查找被这个函数调用的函数（们）</div><div class="line">3或者c  —— 查找调用这个函数的函数（们）</div><div class="line">4或者t   —— 查找这个字符串</div><div class="line">6或者e  —— 查找这个egrep匹配模式</div><div class="line">7或者f   —— 查找这个文件</div><div class="line">8或者i   —— 查找#include这个文件的文件（们）</div><div class="line"></div><div class="line">:cs f g zmalloc 查看这个函数的定义</div></pre></td></tr></table></figure></p>
+<h3 id="Cscope"><a href="#Cscope" class="headerlink" title="Cscope"></a>Cscope</h3><p>下面介绍一个非常实用的工具 <code>cscope</code><br>这个工具的作用是实现函数的跳转，如果你是ubuntu系统，请执行<br><code>apt-get install cscope</code><br>首先在目录下使用“cscope -Rkqb”生成cscope.out文件<br>-R     ：表示包含此目录的子目录，而非仅仅是当前目录；<br>-b     ：此参数告诉cscope生成数据库后就自动退出；<br>-q     ：生成cscope.in.out和cscope.po.out文件，加快cscope的索引速度可能会用到的其他选项：<br>-k     ：在生成索引时，不搜索/usr/include目录；<br>上面一步就是为你的源文件建立一个cscope数据库<br>在Vim启动之后手动地添加这个数据库，输入<code>: cs add cscope.out</code> 即可，然后你可以通过<code>:cs show</code>来检查一下是否被添加进去<br>接下来输入<code>:set cscopetag</code> 你可以把光标移动到某个位置通过<code>Ctrl+]</code>可以直接跳转到定义处，通过<code>Ctrl+t</code>可以返回跳转前的地方<br>此外还可以调“cscope find”（或 cs f ）命令进行查找<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">0或者s   —— 查找这个C符号</div><div class="line">1或者g  —— 查找这个定义</div><div class="line">2或者d  —— 查找被这个函数调用的函数（们）</div><div class="line">3或者c  —— 查找调用这个函数的函数（们）</div><div class="line">4或者t   —— 查找这个字符串</div><div class="line">6或者e  —— 查找这个egrep匹配模式</div><div class="line">7或者f   —— 查找这个文件</div><div class="line">8或者i   —— 查找#include这个文件的文件（们）</div><div class="line"></div><div class="line">:cs f g zmalloc 查看这个函数的定义</div></pre></td></tr></table></figure></p>
 <p>还有一点：默认情况下cscope值会在当前目录下针对c、iex和yacc（扩展名分别为.c、.h、.I、.y）程序文件进行解析（如果指定了-R参数则包含其自身的子目录）。这样出现的问题就是，我们对于C++或Java文件怎么办，解决方案是：我们可以生成一个名为cscope.finds的文件列表，并交由cscope去解析。在Linux系统中，生成这个文件列表的方法是：<br><code>find . –name &quot;*.java&quot; &gt; cscope.files</code><br>然后运行cscope –b 命令重新生成数据库就OK了.</p>
-<h3 id="taglist"><a href="#taglist" class="headerlink" title="taglist"></a>taglist</h3><p>这是一个在新的窗口上记录你跳转的信息的工具，必须要先安装好ctags，不过现在的ubuntu系统都安装有ctags<br>点击<a href="http://www.vim.org/scripts/script.php?script_id=272" target="_blank" rel="external">taglist</a>进入下载页面下载taglist，利用<code>unzip</code>解压<br>得到两个文件夹，然后<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp doc/taglist.txt    /usr/share/vim/vim74/doc/             －－taglist 帮助文件 (vim74可能有变，具体查看自己机器)</div><div class="line">cp plugin/taglist.vim   /usr/share/vim/vim74/plugin/        －－ taglist 插件</div></pre></td></tr></table></figure></p>
+<h3 id="Taglist"><a href="#Taglist" class="headerlink" title="Taglist"></a>Taglist</h3><p>这是一个在新的窗口上记录你跳转的信息的工具，必须要先安装好ctags，不过现在的ubuntu系统都安装有ctags<br>点击<a href="http://www.vim.org/scripts/script.php?script_id=272" target="_blank" rel="external">taglist</a>进入下载页面下载taglist，利用<code>unzip</code>解压<br>得到两个文件夹，然后<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp doc/taglist.txt    /usr/share/vim/vim74/doc/             －－taglist 帮助文件 (vim74可能有变，具体查看自己机器)</div><div class="line">cp plugin/taglist.vim   /usr/share/vim/vim74/plugin/        －－ taglist 插件</div></pre></td></tr></table></figure></p>
 <p>启动vim，可使用 “:helptags .”来配置好帮助文件，并能够用来查看；</p>
 <p>重启vim，用”:TlistToggle”来打开和关闭taglist窗口。</p>
 <h3 id="实用小技巧"><a href="#实用小技巧" class="headerlink" title="实用小技巧"></a>实用小技巧</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">dd             删除某一行</div><div class="line">w,e,b,W,E,B    按单词跳，比较快</div><div class="line">:set mouse=a   开启鼠标功能，可以用鼠标点击切换光标位置</div><div class="line">:3,9d</div><div class="line">:4,8co15       复制4到8行到15行下</div><div class="line">:4,8Commentary 注释4,8行（要先安装好vimrc）</div><div class="line">:5G            光标移动到第5行</div><div class="line">:G             光标移动到最后一行</div><div class="line">:gg            光标移动到第一行</div><div class="line">:4j            向下跳4行</div><div class="line">:e filename    打开某个文件</div><div class="line">Crtl+6         切换buffer</div><div class="line">bn,bp          buffer下一个上一个</div></pre></td></tr></table></figure>
@@ -321,6 +321,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux-vim/" rel="tag">#linux vim</a>
+          
+        </div>
       
 
       
@@ -413,6 +419,13 @@
           
 
           
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
 
         </nav>
 
@@ -437,7 +450,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#snippet"><span class="nav-number">1.</span> <span class="nav-text">snippet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mru"><span class="nav-number">2.</span> <span class="nav-text">mru</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NERDTree"><span class="nav-number">3.</span> <span class="nav-text">NERDTree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cscope"><span class="nav-number">4.</span> <span class="nav-text">cscope</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#taglist"><span class="nav-number">5.</span> <span class="nav-text">taglist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实用小技巧"><span class="nav-number">6.</span> <span class="nav-text">实用小技巧</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#snippet"><span class="nav-number">1.</span> <span class="nav-text">snippet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MRU"><span class="nav-number">2.</span> <span class="nav-text">MRU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NERDTree"><span class="nav-number">3.</span> <span class="nav-text">NERDTree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cscope"><span class="nav-number">4.</span> <span class="nav-text">Cscope</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Taglist"><span class="nav-number">5.</span> <span class="nav-text">Taglist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实用小技巧"><span class="nav-number">6.</span> <span class="nav-text">实用小技巧</span></a></li></ol></div>
             
           </div>
         </section>
