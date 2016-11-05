@@ -84,12 +84,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="TimeLine">
-<meta property="og:url" content="http://fuxiaotong.github.io/blog/index.html">
+<meta name="description" content="vim 是一个非常强大的工具，因为可以安装各种各样好用的插件，vim 和 emacs 被成为程序员们的最爱，这里我来简单介绍一个如何优雅地使用vim网友的力量是强大的，我们可以在 github 这里找到一个神器，相信你一定会喜欢  
+通过下面这两行代码即可完成安装12git clone https://github.com/amix/vimrc.git ~/.vim_runtimesh ~/.vi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何高效使用vim">
+<meta property="og:url" content="http://fuxiaotong.github.io/blog/2016/11/05/如何高效使用vim/index.html">
 <meta property="og:site_name" content="TimeLine">
+<meta property="og:description" content="vim 是一个非常强大的工具，因为可以安装各种各样好用的插件，vim 和 emacs 被成为程序员们的最爱，这里我来简单介绍一个如何优雅地使用vim网友的力量是强大的，我们可以在 github 这里找到一个神器，相信你一定会喜欢  
+通过下面这两行代码即可完成安装12git clone https://github.com/amix/vimrc.git ~/.vim_runtimesh ~/.vi">
+<meta property="og:updated_time" content="2016-11-05T04:59:50.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TimeLine">
+<meta name="twitter:title" content="如何高效使用vim">
+<meta name="twitter:description" content="vim 是一个非常强大的工具，因为可以安装各种各样好用的插件，vim 和 emacs 被成为程序员们的最爱，这里我来简单介绍一个如何优雅地使用vim网友的力量是强大的，我们可以在 github 这里找到一个神器，相信你一定会喜欢  
+通过下面这两行代码即可完成安装12git clone https://github.com/amix/vimrc.git ~/.vim_runtimesh ~/.vi">
 
 
 
@@ -110,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://fuxiaotong.github.io/blog/"/>
+  <link rel="canonical" href="http://fuxiaotong.github.io/blog/2016/11/05/如何高效使用vim/"/>
 
-  <title> TimeLine </title>
+  <title> 如何高效使用vim | TimeLine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
@@ -133,9 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -234,10 +239,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/11/05/如何高效使用vim/" itemprop="url">
-                  如何高效使用vim
-                </a>
+                如何高效使用vim
               
             
           </h1>
@@ -277,9 +279,7 @@
       
 
       
-        
-          
-            <p>vim 是一个非常强大的工具，因为可以安装各种各样好用的插件，vim 和 emacs 被成为程序员们的最爱，这里我来简单介绍一个如何优雅地使用vim<br>网友的力量是强大的，我们可以在 <a href="https://github.com/amix/vimrc" target="_blank" rel="external">github</a> 这里找到一个神器，相信你一定会喜欢  </p>
+        <p>vim 是一个非常强大的工具，因为可以安装各种各样好用的插件，vim 和 emacs 被成为程序员们的最爱，这里我来简单介绍一个如何优雅地使用vim<br>网友的力量是强大的，我们可以在 <a href="https://github.com/amix/vimrc" target="_blank" rel="external">github</a> 这里找到一个神器，相信你一定会喜欢  </p>
 <p>通过下面这两行代码即可完成安装<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/amix/vimrc.git ~/.vim_runtime</div><div class="line">sh ~/.vim_runtime/install_awesome_vimrc.sh</div></pre></td></tr></table></figure></p>
 <p>下面说说这里面好用的插件  </p>
 <h3 id="snippet"><a href="#snippet" class="headerlink" title="snippet"></a>snippet</h3><p>当然是最强大的 snippet 排在第一位<br><code>~/.vim_runtime/sources_non_forked/vim-snippets/snippets</code> 这个目录下，我们可以看到各种语言的 snippet. 你应该小心翼翼地找到你的那门语言的<br>snippet. 然后编辑它，比如<code>lua.snippets</code>，进去后可以看到各种snippet,比如有<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">snippet forp</div><div class="line">    <span class="keyword">for</span> $&#123;<span class="number">1</span>:i&#125;,$&#123;<span class="number">2</span>:v&#125; <span class="keyword">in</span> <span class="built_in">pairs</span>($&#123;<span class="number">3</span>:table_name&#125;) <span class="keyword">do</span></div><div class="line">        $&#123;<span class="number">0</span>:<span class="comment">-- body&#125;</span></div><div class="line">    <span class="keyword">end</span></div></pre></td></tr></table></figure></p>
@@ -293,16 +293,20 @@
 <p>重启vim，用”:TlistToggle”来打开和关闭taglist窗口。</p>
 <h3 id="实用小技巧"><a href="#实用小技巧" class="headerlink" title="实用小技巧"></a>实用小技巧</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">dd             删除某一行</div><div class="line">w,e,b,W,E,B    按单词跳，比较快</div><div class="line">:set mouse=a   开启鼠标功能，可以用鼠标点击切换光标位置</div><div class="line">:3,9d</div><div class="line">:4,8co15       复制4到8行到15行下</div><div class="line">:4,8Commentary 注释4,8行（要先安装好vimrc）</div><div class="line">:5G            光标移动到第5行</div><div class="line">:G             光标移动到最后一行</div><div class="line">:gg            光标移动到第一行</div><div class="line">:4j            向下跳4行</div><div class="line">:e filename    打开某个文件</div><div class="line">Crtl+6         切换buffer</div><div class="line">bn,bp          buffer下一个上一个</div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -310,208 +314,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/11/01/python之旅/" rel="next" title="python之旅">
+                <i class="fa fa-chevron-left"></i> python之旅
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/11/01/python之旅/" itemprop="url">
-                  python之旅
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T23:37:30+08:00" content="2016-11-01">
-              2016-11-01
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="python-印象"><a href="#python-印象" class="headerlink" title="python 印象"></a>python 印象</h3><p>python给我的第一印象是一个非常方便的语言，它似乎能尽可能缩短你的代码量，让你更加专注于你的逻辑，让你能更加轻松更加容易地实现你的idea。有了这个神器，你能快速完成一个用C++、java这些语言很难完成的任务，话不多说，让我们进入这个神圣的殿堂，翻开python的第一页书吧！</p>
-<h3 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h3><p>我们来看看 python 的操作符，<code>print 3**2</code> 结果是9,也就是说两个星号表示的是乘方<br><code>print 2 &gt; 4</code> 返回的是False<br>在表示不等的时候最好用!=<br>python 只能是以字母或者下划线结尾的，也是大小写敏感的。python也是一门动态语言，也就是说，它不需要事先声明变量的类型，而是在赋值的那一刻进行初始化的。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/02/操作系统学习/" itemprop="url">
-                  操作系统学习
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-10-02T17:40:51+08:00" content="2016-10-02">
-              2016-10-02
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><p>对于非计算机专业或者计算机软件专业但是操作系统学得不好的人那怎么办呢，其实现在学习计算机知识的门槛并不高，可以去 学堂在线 或者 coursera 搜索操作系统的课程学习，个人比较推荐的是 学堂在线 的操作系统课程<br>其中列出一些个人认为比较重要章节，必须要掌握：<br>物理内存管理：连续内存分配（连续内存分配、伙伴系统）<br>物理内存管理：非连续内存分配（页表、快表、多级页表、反置页表、段页式存储管理）<br>虚拟存储（交换、虚拟页式存储、缺页异常）<br>页面置换算法（最优、先进先出、最近最久未使用）<br>进程和线程（进程控制块、进程状态切换、线程概念、用户线程、内核线程）<br>进程控制（进程切换、创建、加载）<br>处理机调度（先来先服务、短进程优先和最高响应比优先调度算法、时间片轮转、多级反馈队列）<br>同步互斥<br>信号量与管程<br>死锁与进程间通信（死锁的四个必要条件、银行家算法、信号和管道、消息队列和共享内存）<br>文件系统（文件描述符、虚拟文件系统、文件缓存、空间空间管理和冗余磁盘阵列RAID）</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -519,6 +347,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -538,8 +370,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/tx.jpg"
@@ -575,6 +416,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#snippet"><span class="nav-number">1.</span> <span class="nav-text">snippet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mru"><span class="nav-number">2.</span> <span class="nav-text">mru</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NERDTree"><span class="nav-number">3.</span> <span class="nav-text">NERDTree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cscope"><span class="nav-number">4.</span> <span class="nav-text">cscope</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#taglist"><span class="nav-number">5.</span> <span class="nav-text">taglist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实用小技巧"><span class="nav-number">6.</span> <span class="nav-text">实用小技巧</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -678,6 +530,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
